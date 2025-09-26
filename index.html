@@ -1,84 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Curso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Eventos del Curso</h1>
+    </header>
 
-header {
-    background-color: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+    <main>
+        <section class="events-section">
+            <h2>Próximos Eventos</h2>
+            <div id="future-events">
+                </div>
+        </section>
 
-main {
-    max-width: 800px;
-    margin: auto;
-}
+        <section class="events-section past-events-container">
+            <button id="toggle-past-events">
+                Eventos Pasados <span>▼</span>
+            </button>
+            <div id="past-events" class="collapsed">
+                </div>
+        </section>
+    </main>
 
-.events-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.event-card {
-    border-left: 4px solid #007bff;
-    padding-left: 15px;
-    margin-bottom: 15px;
-}
-
-.event-card h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #0056b3;
-}
-
-.event-card p {
-    margin: 5px 0 0;
-}
-
-/* Nuevo estilo para el lugar */
-.event-location {
-    font-size: 0.85rem; /* Tamaño de letra más pequeño */
-    color: #6c757d;    /* Color gris para distinguirlo */
-    margin-top: 5px;   /* Pequeño margen superior */
-}
-
-
-#toggle-past-events {
-    width: 100%;
-    background-color: #f0f0f0;
-    border: none;
-    padding: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: left;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#past-events {
-    max-height: 500px; /* Altura máxima para mostrar el contenido */
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-#past-events.collapsed {
-    max-height: 0;
-    opacity: 0;
-    padding: 0;
-}
-
-#past-events .event-card {
-    margin-top: 15px;
-    border-left-color: #6c757d;
-}
+    <script src="script.js"></script>
+</body>
+</html>
